@@ -1,0 +1,61 @@
+@import 'settings';
+@import 'foundation-emails';
+
+td,
+th {
+  word-wrap: inherit;
+  hyphens: inherit;
+}
+
+th.callout-inner {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.hide-for-large {
+  display: block !important;
+}
+
+.color {
+  color: $primary-color;
+}
+
+.good {
+  color: #4bf0e6;
+}
+
+.fair {
+  color: #4fcbad;
+}
+.moderate {
+  color: #f0e65f;
+}
+.poor {
+  color: #ff5354;
+}
+.very-poor {
+  color: #960632;
+}
+.extremely-poor {
+  color: #7d237d;
+}
+.nul {
+  color: #2abdf0;
+}
+.tres-faible {
+  color: #19aa4b;
+}
+.faible {
+  color: #fdd504;
+}
+.moyen {
+  color: #f7941d;
+}
+.eleve {
+  color: #ef6342;
+}
+.tres-eleve {
+  color: #da3d48;
+}

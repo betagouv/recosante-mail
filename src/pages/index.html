@@ -1,0 +1,133 @@
+---
+subject: Votre Recommandation Recosanté
+---
+
+<spacer size="40"></spacer>
+<container>
+  <row>
+    <columns>
+      <spacer size="18"></spacer>
+      <div class="show-for-large">
+        <center>
+          <img src="assets/img/logo.gif" />
+        </center>
+      </div>
+      <div class="hide-for-large">
+        <center>
+          <img src="assets/img/logo-small.gif" />
+        </center>
+      </div>
+      <spacer size="18"></spacer>
+    </columns>
+  </row>
+
+  <row>
+    <columns>
+      <p class="lead">
+        <strong> \{{contact.RECOMMANDATION|safe}} </strong>
+      </p>
+      <spacer size="16"></spacer>
+      <p>\{{ contact.PRECISIONS|safe}}</p>
+    </columns>
+  </row>
+  <spacer size="16"></spacer>
+  {% if contact.POLLUANT %}<row>
+    <columns>
+      <callout class="alert">
+        <spacer size="8"></spacer>
+        <h3 class="text-center">
+          ⚠️ <br />Un épisode de pollution \{{contact.POLLUANT}} est prévu
+          aujourd'hui dans votre département.
+        </h3>
+        <spacer size="8"></spacer>
+        <center>
+          <button
+            href="https://my.sendinblue.com/camp/showpreview/id/%7B%7B%20contact.LIEN_AASQA%20%7D%7D"
+          >
+            En savoir plus
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
+  {% endif %}
+  <row>
+    <columns>
+      <callout>
+        <spacer size="8"></spacer>
+        <h2 class="text-center">
+          ☁️<br />L'indice de qualité de l'air à
+          <span class="color">\{{contact.VILLE}}</span> est&nbsp;<span
+            style="color: \{{contact.BACKGROUND_COLOR}}"
+            >\{{contact.QUALITE_AIR|lower}}</span
+          >.
+        </h2>
+        <spacer size="16"></spacer>
+        <center>
+          <img src="assets/img/chart-air.png" />
+        </center>
+        <spacer size="24"></spacer>
+        <p class="text-right"><a href="#">En savoir plus</a></p>
+      </callout>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <callout>
+        <spacer size="8"></spacer>
+        <h2 class="text-center">
+          🌸<br />
+          Le risque allergique aux pollens en
+          <span class="color">\{{contact.DEPARTEMENT}}</span> est&nbsp;<span
+            style="color: \{{contact.POLLENS_COLOR}}"
+            >\{{contact.RISQUE_POLLENS|lower}}</span
+          >.
+        </h2>
+        <spacer size="16"></spacer>
+        <center>
+          <img src="assets/img/chart-pollens.png" />
+        </center>
+        <spacer size="24"></spacer>
+        <p class="text-right"><a href="#">En savoir plus</a></p>
+      </callout>
+    </columns>
+  </row>
+  <row>
+    <columns>
+      <h6 class="text-center">Allez-vous appliquer cette recommandation ?</h6>
+      <p class="text-center lead">
+        <a
+          href="http://ecosante.beta.gouv.fr/newsletter/%7B%7Bcontact.SHORT_ID%7D%7D/avis?avis=oui"
+        >
+          👍&nbsp;Oui
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a
+          href="http://ecosante.beta.gouv.fr/newsletter/%7B%7Bcontact.SHORT_ID%7D%7D/avis?avis=non"
+        >
+          👎&nbsp;Non
+        </a>
+      </p>
+      <spacer size="20"></spacer>
+      <p class="text-center">
+        <a
+          href="http://recosante.beta.gouv.fr/profil?user=\{{contact.SHORT_ID}}"
+          >Modifier mon profil</a
+        >
+      </p>
+    </columns>
+  </row>
+  <row>
+    <columns large="5" small="5">
+      <spacer size="24"></spacer>
+      <img src="assets/img/repufrancaise.jpg" />
+    </columns>
+    <columns large="7" small="7">
+      <h6 class="text-center">Ils nous accompagnent</h6>
+      <img class="float-center" src="assets/img/atmo.jpg" />
+      <spacer size="16"></spacer>
+      <img class="float-center" src="assets/img/rnsa.jpg" />
+    </columns>
+  </row>
+</container>
+<spacer size="40"></spacer>
