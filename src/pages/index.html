@@ -35,7 +35,8 @@ subject: Votre Recommandation Recosanté
     </columns>
   </row>
   <spacer size="16"></spacer>
-  {% if contact.POLLUANT %}<row>
+  {% if contact.POLLUANT %}
+  <row>
     <columns>
       <callout class="alert">
         <spacer size="8"></spacer>
@@ -54,7 +55,7 @@ subject: Votre Recommandation Recosanté
       </callout>
     </columns>
   </row>
-  {% endif %}
+  {% endif %} {% if contact.QUALITE_AIR %}
   <row>
     <columns>
       <callout>
@@ -77,6 +78,7 @@ subject: Votre Recommandation Recosanté
       </callout>
     </columns>
   </row>
+  {% endif %} {% if contact.RISQUE_POLLENS %}
   <row>
     <columns>
       <callout>
@@ -99,6 +101,7 @@ subject: Votre Recommandation Recosanté
       </callout>
     </columns>
   </row>
+  {% endif %}
   <row>
     <columns>
       <h6 class="text-center">Allez-vous appliquer cette recommandation ?</h6>
