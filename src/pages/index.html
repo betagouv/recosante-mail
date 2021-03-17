@@ -78,7 +78,7 @@ subject: Votre Recommandation Recosanté
       </callout>
     </columns>
   </row>
-  {% endif %} {% if contact.RISQUE_POLLENS %}
+  {% endif %} {% if contact.SHOW_RAEP %}
   <row>
     <columns>
       <callout>
@@ -86,8 +86,8 @@ subject: Votre Recommandation Recosanté
         <h2 class="text-center">
           Le risque allergique aux pollens en
           <span class="color">\{{contact.DEPARTEMENT}}</span> est&nbsp;<span
-            style="color: \{{contact.POLLENS_COLOR}}"
-            >\{{contact.RISQUE_POLLENS|lower}}</span
+            style="color: \{{contact.BACKGROUND_COLOR_RAEP}}"
+            >\{{contact.RAEP|lower}}</span
           >.
         </h2>
         <spacer size="16"></spacer>
