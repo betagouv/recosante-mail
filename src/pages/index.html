@@ -83,8 +83,7 @@ subject: Votre Recommandation Recosanté
       <callout>
         <spacer size="8"></spacer>
         <h2 class="text-center">
-          Le risque allergique aux pollens {% if contact.DEPARTEMENT == "Paris"
-          %}à {% else %}en {% endif %}
+          Le risque allergique aux pollens \{{contact.PREPOSITION_DEPARTEMENT}}
           <span class="color">\{{contact.DEPARTEMENT}}</span> est&nbsp;<span
             style="color: \{{contact.BACKGROUND_COLOR_RAEP }}"
             >\{{contact.RAEP|lower}}</span
