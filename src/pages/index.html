@@ -34,6 +34,19 @@ subject: Votre Recommandation Recosanté
       <p>\{{ contact.PRECISIONS|safe}}</p>
     </columns>
   </row>
+  {% if contact.LIEN_QA_POLLEN %}
+  <row>
+    <columns>
+      <p>
+        <strong>
+          ⚠️ Une mauvaise qualité de l'air peut aggraver les symptômes
+          allergiques. Veillez à être encore plus attentif à cette
+          recommandation.
+        </strong>
+      </p>
+    </columns>
+  </row>
+  {% endif %}
   <spacer size="16"></spacer>
   {% if contact.POLLUANT %}
   <row>
@@ -83,7 +96,7 @@ subject: Votre Recommandation Recosanté
       <callout>
         <spacer size="8"></spacer>
         <h2 class="text-center">
-          Le risque allergique aux pollens \{{contact.PREPOSITION_DEPARTEMENT}}
+          Le risque d'allergie aux pollens \{{contact.PREPOSITION_DEPARTEMENT}}
           <span class="color">\{{contact.DEPARTEMENT}}</span> est&nbsp;<span
             style="color: \{{contact.BACKGROUND_COLOR_RAEP }}"
             >\{{contact.RAEP|lower}}</span
@@ -101,6 +114,33 @@ subject: Votre Recommandation Recosanté
     </columns>
   </row>
   {% endif %}
+  <row>
+    <columns>
+      <h6 class="text-center">Partager Recosanté</h6>
+    </columns>
+  </row>
+  <row>
+    <columns small="4" large="6">
+      <a
+        href="mailto:?subject=Tu%20connais%20Recosant%C3%A9%20%3F&body=Tu%20connais%20Recosant%C3%A9%20%3F%20C'est%20une%20lettre%20d'information%20quotidienne%20qui%20te%20donne%20des%20conseils%20personnalis%C3%A9s%20en%20fonction%20de%20tes%20habitudes%20pour%20te%20prot%C3%A9ger%20des%20impacts%20de%20la%20qualit%C3%A9%20de%20l%E2%80%99air%20sur%20ta%20sant%C3%A9.%20Tous%20les%20matins%2C%20tu%20re%C3%A7ois%20un%20mail%20qui%20t'informe%20de%20la%20qualit%C3%A9%20de%20l'air%20autour%20de%20chez%20toi%20et%20une%20recommandation%20pour%20adapter%20ton%20comportement%20et%2Fou%20tes%20activit%C3%A9s%20en%20fonction.Pour%20t'inscrire%20%3A%20http%3A%2F%2Frecosante.beta.gouv.fr%2F"
+        ><img class="float-right" src="assets/img/mail.png"
+      /></a>
+    </columns>
+    <columns small="4">
+      <div class="hide-for-large">
+        <a href="fb-messenger://share?link=https://recosante.beta.gouv.fr/"
+          ><center><img src="assets/img/messenger.png" /></center
+        ></a>
+      </div>
+    </columns>
+    <columns small="4" large="6">
+      <a
+        href="https://wa.me/?text=Tu%20connais%20Recosant%C3%A9%20%3F%20C%27est%20une%20lettre%20d%27information%20quotidienne%20qui%20te%20donne%20des%20conseils%20personnalis%C3%A9s%20en%20fonction%20de%20tes%20habitudes%20pour%20te%20prot%C3%A9ger%20des%20impacts%20de%20la%20qualit%C3%A9%20de%20l%E2%80%99air%20sur%20ta%20sant%C3%A9.%20Tous%20les%20matins%2C%20tu%20re%C3%A7ois%20un%20mail%20qui%20t%27informe%20de%20la%20qualit%C3%A9%20de%20l%27air%20autour%20de%20chez%20toi%20et%20une%20recommandation%20pour%20adapter%20ton%20comportement%20et%2Fou%20tes%20activit%C3%A9s%20en%20fonction.%20Pour%20t%27inscrire%20%3A%20http%3A%2F%2Frecosante.beta.gouv.fr%2F"
+        ><img class="float-left" src="assets/img/whatsapp.png" / ></a
+      >
+    </columns>
+  </row>
+  <spacer size="30"></spacer>
   <row>
     <columns>
       <h6 class="text-center">Allez-vous appliquer cette recommandation ?</h6>
@@ -147,12 +187,11 @@ subject: Votre Recommandation Recosanté
     <columns>
       <p class="text-center">
         <small>
-          Conformément à la réglementation en matière de données personnelles,
-          vous disposez d'un droit d'accès, de rectification, d'opposition,
-          d'effacement et de portabilité de vos données que vous pouvez exercer
-          par courrier électronique à l'adresse&nbsp;:
-          recosante@data.gouv.fr</small
-        >
+          Conformément à la réglementation en vigueur, vous disposez d’un droit
+          d’accès, de rectification et de suppression de vos données que vous
+          pouvez exercer par courrier électronique à l'adresse&nbsp;:
+          contact@recosante.beta.gouv.fr
+        </small>
       </p>
       <p class="text-center">
         <small
@@ -162,9 +201,9 @@ subject: Votre Recommandation Recosanté
       </p>
     </columns></row
   ><row
-    ><columns large="5" small="5">
+    ><columns>
       <center>
-        <img src="assets/img/repufrancaise.jpg" />
+        <img src="assets/img/footer.jpg" />
       </center> </columns
   ></row>
 </container>
