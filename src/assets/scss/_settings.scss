@@ -16,20 +16,21 @@
 // ---------
 
 $primary-color: #000091;
-$secondary-color: #777777;
-$success-color: #3adb76;
-$warning-color: #ffae00;
+$secondary-color: #eef1f7;
+$success-color: #000091;
+$warning-color: #eef1f7;
 $alert-color: #fc8471;
 $light-gray: #f9f8f6;
 $medium-gray: #cacaca;
 $dark-gray: #383838;
 $black: #1e1e1e;
-$white: #fefefe;
+$white: #fff;
+$light-blue: #eef1f7;
 $pre-color: #ff6908;
 $global-width: 520px;
 $global-width-small: 100%;
 $global-gutter: 20px;
-$body-background: #cae9ff;
+$body-background: $white;
 $container-background: $white;
 $global-padding: 20px;
 $global-margin: 20px;
@@ -41,7 +42,7 @@ $global-breakpoint: $global-width + $global-gutter;
 // -------
 
 $grid-column-count: 12;
-$column-padding-bottom: $global-padding;
+$column-padding-bottom: 0;
 $container-radius: 0;
 
 // 3. Block Grid
@@ -67,7 +68,7 @@ $h2-font-size: 24px;
 $h3-font-size: 20px;
 $h4-font-size: 24px;
 $h5-font-size: 20px;
-$h6-font-size: 16px;
+$h6-font-size: 18px;
 $header-margin-bottom: 10px;
 $paragraph-margin-bottom: 10px;
 $small-font-size: 80%;
@@ -117,15 +118,15 @@ $button-rounded: $global-rounded;
 // 6. Callout
 // ----------
 
-$callout-background: $light-gray;
+$callout-background: $light-blue;
 $callout-background-fade: 0;
-$callout-padding: 16px;
-$callout-margin-bottom: $global-margin;
+$callout-padding: 8px;
+$callout-margin-bottom: 0;
 $callout-border: none;
-$callout-border-secondary: 1px solid darken($secondary-color, 20%);
-$callout-border-success: 1px solid darken($success-color, 20%);
-$callout-border-warning: 1px solid darken($warning-color, 20%);
-$callout-border-alert: 0 solid darken($alert-color, 20%);
+$callout-border-secondary: 1px solid $secondary-color;
+$callout-border-success: $success-color;
+$callout-border-warning: $light-blue;
+$callout-border-alert: $alert-color;
 
 // 7. Menu
 // -------
