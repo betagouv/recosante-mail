@@ -19,7 +19,7 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <p class="text-right">
-        <strong>\{{contact.VILLE}}, \{{contact.DEPARTEMENT}}</strong>
+        <strong>\{{contact.VILLE}}</strong>
       </p>
     </columns>
   </row>
@@ -27,7 +27,7 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <p class="text-center">
-        <i> Aujourd’hui, votre recommandation personnalisée est un conseil pratique pour améliorer votre air intérieur.</i>
+        <i>Aujourd’hui, votre recommandation est un conseil pratique pour améliorer votre air intérieur.</i>
       </p>
       <spacer size="16"></spacer>
       <p class="lead">
@@ -54,16 +54,16 @@ subject: Votre Recommandation Recosanté
   {% endif %}
   <row>
     <columns>
-      <p class="text-center small"><strong>Cette recommandation vous est elle utile ?</strong></h6>
+      <p class="text-center small"><strong>Allez-vous appliquer cette recommandation ?</strong></h6>
       <p class="text-center small">
         <a
-          href="http://ecosante.beta.gouv.fr/newsletter/\{{contact.SHORT_ID}}/avis?avis=oui"
+          href="https://ecosante.beta.gouv.fr/newsletter/\{{contact.SHORT_ID}}/avis/?appliquee=oui"
         >
           👍&nbsp;Oui
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a
-          href="http://ecosante.beta.gouv.fr/newsletter/\{{contact.SHORT_ID}}/avis?avis=non"
+          href="https://ecosante.beta.gouv.fr/newsletter/\{{contact.SHORT_ID}}/avis/?appliquee=non"
         >
           👎&nbsp;Non
         </a>
@@ -96,8 +96,8 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <callout class="success"
-        ><p class="text-center white"
-          ><strong>Indice de qualité de l'air</strong></p
+        ><span class="text-center white"
+          ><strong>Indice de qualité de l'air</strong></span
         ></callout
       >
     </columns>
@@ -142,8 +142,8 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <callout class="success"
-        ><p class="text-center white"
-          ><strong>Risque d’allergie aux pollens</strong></p
+        ><span class="text-center white"
+          ><strong>Risque d’allergie aux pollens</strong></span
         ></callout
       >
     </columns>
@@ -606,17 +606,7 @@ subject: Votre Recommandation Recosanté
   </row>
   <spacer size="40"></spacer>
   <row>
-    <columns>
-      <p class="text-center small">
-          Les données utilisées par Recosanté nous sont fournies par
-      </h6>
-      <p class="text-center tiny">
-       <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a><br /><a
-            href="https://www.pollens.fr/"
-            >Le Réseau national de surveillance aérobiologique</a
-          >
-      </p>
-    </columns>
+   
   </row>
   <spacer size="40"></spacer>
   <row>
@@ -633,10 +623,19 @@ subject: Votre Recommandation Recosanté
       </p>
     </columns></row
   > <spacer size="40"></spacer><row
-    ><columns>
-      <center>
+    ><columns small="6">
         <img src="assets/img/footer.jpg" />
-      </center> </columns
-  ></row>
+       </columns
+  > <columns small="6">
+      <p class="text-right small">
+          Les données sont fournies par
+      </h6>
+      <p class="text-right tiny">
+       <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a><br /><a
+            href="https://www.pollens.fr/"
+            >Le Réseau national de surveillance aérobiologique</a
+          >
+      </p>
+    </columns></row>
 </container>
 <spacer size="40"></spacer>
