@@ -16,7 +16,7 @@
 // ---------
 
 $primary-color: #000091;
-$secondary-color: #eef1f7;
+$secondary-color: #000091;
 $success-color: #000091;
 $warning-color: #eef1f7;
 $alert-color: #fc8471;
@@ -123,7 +123,7 @@ $callout-background-fade: 0;
 $callout-padding: 8px;
 $callout-margin-bottom: 0;
 $callout-border: none;
-$callout-border-secondary: 1px solid $secondary-color;
+$callout-border-secondary: $secondary-color;
 $callout-border-success: $success-color;
 $callout-border-warning: $light-blue;
 $callout-border-alert: $alert-color;

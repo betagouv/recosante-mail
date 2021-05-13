@@ -19,12 +19,14 @@ th.callout-inner.success {
   padding-bottom: 8px;
   padding-left: 0;
   padding-right: 0;
+}
+th.callout-inner.secondary {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 0;
+  padding-right: 0;
   background-image: url('../assets/img/background-blue.png');
 }
-th.callout-inner.warning {
-  background-image: url('../assets/img/background.png');
-}
-
 .hide-for-large {
   display: block !important;
 }
@@ -49,4 +51,7 @@ th.callout-inner.warning {
 }
 .fat {
   font-weight: 900;
+}
+.no-margin {
+  margin-bottom: 0;
 }

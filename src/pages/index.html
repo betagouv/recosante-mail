@@ -6,7 +6,7 @@ subject: Votre Recommandation Recosanté
 <container>
   <row>
     <columns>
-      <callout class="success">
+      <callout class="secondary">
         <a href="https://recosante.beta.gouv.fr/">
           <center>
             <img src="assets/img/logo.gif" />
@@ -57,13 +57,13 @@ subject: Votre Recommandation Recosanté
       <p class="text-center small"><strong>Allez-vous appliquer cette recommandation ?</strong></h6>
       <p class="text-center small">
         <a
-          href="https://recosante.beta.gouv.fr/avis/?short_id=\{{contact.SHORT_ID}}&avis=oui)"
+          href="https://recosante.beta.gouv.fr/avis/?short_id=\{{contact.SHORT_ID}}&avis=oui"
         >
           👍&nbsp;Oui
         </a>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <a
-          href="https://recosante.beta.gouv.fr/avis/?short_id=\{{contact.SHORT_ID}}&avis=non)"
+          href="https://recosante.beta.gouv.fr/avis/?short_id=\{{contact.SHORT_ID}}&avis=non"
         >
           👎&nbsp;Non
         </a>
@@ -106,6 +106,7 @@ subject: Votre Recommandation Recosanté
     <columns>
       <callout class="warning">
         <spacer size="8"></spacer>
+        <h2 class="text-center blue fat no-margin">\{{contact.QUALITE_AIR|upper}}</h2>
         <center>
           {% if contact.QUALITE_AIR == "Bon" %}
           <img src="assets/img/atmo-bon.png" />
@@ -158,7 +159,7 @@ subject: Votre Recommandation Recosanté
         <table >
           {% if contact.ALLERGENE_CYPRES %}
           <tr>
-            <td><p class="text-right small">Cypres&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Cypres&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CYPRES == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -179,7 +180,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_NOISETIER %}
           <tr>
-            <td><p class="text-right small">Noisetier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Noisetier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_NOISETIER == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -200,7 +201,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_AULNE %}
           <tr>
-            <td><p class="text-right small">Aulne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Aulne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_AULNE == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -221,7 +222,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_PEUPLIER %}
           <tr>
-            <td><p class="text-right small">Peuplier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Peuplier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PEUPLIER == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -242,7 +243,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_SAULE %}
           <tr>
-            <td><p class="text-right small">Saule&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Saule&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_SAULE == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -263,7 +264,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_FRENE %}
           <tr>
-            <td><p class="text-right small">Frêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Frêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_FRENE == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -284,7 +285,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_CHARME %}
           <tr>
-            <td><p class="text-right small">Charme&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Charme&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHARME == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -305,7 +306,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_BOULEAU %}
           <tr>
-            <td><p class="text-right small">Bouleau&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Bouleau&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_BOULEAU == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -326,7 +327,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_PLATANE %}
           <tr>
-            <td><p class="text-right small">Platane&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Platane&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PLATANE == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -347,7 +348,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_CHENE %}
           <tr>
-            <td><p class="text-right small">Chêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Chêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHENE == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -368,7 +369,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_OLIVIER %}
           <tr>
-            <td><p class="text-right small">Olivier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Olivier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_OLIVIER == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -389,7 +390,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_TILLEUL %}
           <tr>
-            <td><p class="text-right small">Tilleul&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Tilleul&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_TILLEUL == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -411,7 +412,7 @@ subject: Votre Recommandation Recosanté
          
           {% if contact.ALLERGENE_CHATAIGNER %}
           <tr>
-            <td><p class="text-right small">Châtaignier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Châtaignier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHATAIGNER == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -432,7 +433,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_RUMEX %}
           <tr>
-            <td><p class="text-right small">Rumex&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Rumex&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_RUMEX == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -453,7 +454,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_GRAMINEES %}
           <tr>
-            <td><p class="text-right small">Graminées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Graminées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_GRAMINEES == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -474,7 +475,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_PLANTAIN %}
           <tr>
-            <td><p class="text-right small">Plantain&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Plantain&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PLANTAIN == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -495,7 +496,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_URTICACEES %}
           <tr>
-            <td><p class="text-right small">Urticacées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Urticacées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_URTICACEES == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -516,7 +517,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_ARMOISES %}
           <tr>
-            <td><p class="text-right small">Armoises&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Armoises&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_ARMOISES == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -537,7 +538,7 @@ subject: Votre Recommandation Recosanté
           {% endif %}
           {% if contact.ALLERGENE_AMBROISIES %}
           <tr>
-            <td><p class="text-right small">Ambroisies&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+            <td><p class="text-right small black">Ambroisies&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_AMBROISIES == 1 %}
                 <img src="assets/img/tres-faible.png" />
               {% endif %}
@@ -622,7 +623,7 @@ subject: Votre Recommandation Recosanté
         <img src="assets/img/footer.jpg" />
        </columns
   > <columns small="6">
-      <p class="text-right small">
+      <p class="text-right small black">
           Les données sont fournies par
       </h6>
       <p class="text-right tiny">
