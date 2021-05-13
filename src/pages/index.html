@@ -27,11 +27,11 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <p class="text-center">
-        <i>Aujourd’hui, votre recommandation est un conseil pratique pour améliorer votre air intérieur.</i>
+        <i>Aujourd’hui, votre recommandation est un conseil pratique pour \{{contact.OBJECTIF|lower}}</i>
       </p>
       <spacer size="16"></spacer>
       <p class="lead">
-        <strong> \{{contact.RECOMMANDATION|safe}} </strong>
+        <strong>\{{contact.RECOMMANDATION|safe}}</strong>
       </p>
       <spacer size="16"></spacer>
       <p>\{{ contact.PRECISIONS|safe}}</p>
@@ -129,10 +129,10 @@ subject: Votre Recommandation Recosanté
         </center>
         <spacer size="24"></spacer>
         <p class="text-center tiny">
-          Prévision pour le 16/04/2021<br />à \{{contact.VILLE}}
+          Prévision pour le \{{contact.QUALITE_AIR_VALIDITE}}<br />à \{{contact.VILLE}}
         </p>
         <p class="text-center small">
-          <a href="\{{contact.LIEN_AASQA}}">En savoir plus</a>
+          L’indice peut être mis à jour à 14h,<br/><a href="\{{contact.LIEN_AASQA}}">retrouvez-le ici.</a>
         </p>
       </callout>
     </columns>
@@ -559,12 +559,10 @@ subject: Votre Recommandation Recosanté
         </table></columns></row>
         <spacer size="24"></spacer>
         <p class="text-center tiny">
-          Prévision du 12/04/2021 au 18/04/2021<br />\{{contact.DEPARTEMENT_PREPOSITION}}
+          Prévision du \{{contact.RAEP_DEBUT_VALIDITE}} au \{{contact.RAEP_FIN_VALIDITE}}<br />\{{contact.DEPARTEMENT_PREPOSITION}}
           \{{contact.DEPARTEMENT}}
         </p>
-        <p class="text-center small">
-          <a href="https://www.pollens.fr/">En savoir plus</a>
-        </p>
+     
       </callout>
     </columns>
   </row>
