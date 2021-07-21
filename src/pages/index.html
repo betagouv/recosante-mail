@@ -83,7 +83,7 @@ subject: Votre Recommandation Recosanté
         <spacer size="8"></spacer>
         <center>
           <button
-            href="https://my.sendinblue.com/camp/showpreview/id/%7B%7B%20contact.LIEN_AASQA%20%7D%7D"
+            href="\{{contact.LIEN_AASQA}}"
           >
             En savoir plus
           </button>
@@ -92,7 +92,8 @@ subject: Votre Recommandation Recosanté
     </columns>
   </row>
   <spacer size="40"></spacer>
-  {% endif %} {% if contact.QUALITE_AIR %}
+  {% endif %} 
+  
   <row>
     <columns>
       <callout class="success"
@@ -106,6 +107,7 @@ subject: Votre Recommandation Recosanté
     <columns>
       <callout class="warning">
         <spacer size="8"></spacer>
+        {% if contact.QUALITE_AIR %}
         <h2 class="text-center blue fat no-margin">\{{contact.QUALITE_AIR|upper}}</h2>
         <center>
           {% if contact.QUALITE_AIR == "Bon" %}
@@ -123,11 +125,143 @@ subject: Votre Recommandation Recosanté
           {% if contact.QUALITE_AIR == "Très Mauvais" %}
           <img src="assets/img/atmo-tres-mauvais.png" />
           {% endif %} 
-          {% if contact.QUALITE_AIR == "Extrêmement mauvais" %}
+          {% if contact.QUALITE_AIR == "Extrêmement Mauvais" %}
           <img src="assets/img/atmo-extremement-mauvais.png" />
           {% endif %} 
-
         </center>
+        <spacer size="16"></spacer>
+
+        
+         {% if contact.SS_INDICE_PM25_LABEL %}
+          <row>
+          <columns small="6">
+            <spacer size="2"></spacer><p class="text-right small black">PM2.5&nbsp;&nbsp;&nbsp;</p></columns>
+          <columns small="6">
+              {% if contact.SS_INDICE_PM25_LABEL == "Bon" %}
+                <img src="assets/img/polluant-bon.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM25_LABEL == "Moyen" %}
+                <img src="assets/img/polluant-moyen.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM25_LABEL == "Dégradé" %}
+                <img src="assets/img/polluant-degrade.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM25_LABEL == "Mauvais" %}
+                <img src="assets/img/polluant-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM25_LABEL == "Très Mauvais" %}
+                <img src="assets/img/polluant-tres-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM25_LABEL == "Extrêmement Mauvais" %}
+                <img src="assets/img/polluant-extremement-mauvais.png" />
+              {% endif %}
+            <spacer size="16"></columns></row>
+
+          {% endif %}
+         {% if contact.SS_INDICE_PM10_LABEL %}
+          <row>
+          <columns small="6">
+            <spacer size="2"></spacer><p class="text-right small black">PM10&nbsp;&nbsp;&nbsp;</p></columns>
+          <columns small="6">
+              {% if contact.SS_INDICE_PM10_LABEL == "Bon" %}
+                <img src="assets/img/polluant-bon.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM10_LABEL == "Moyen" %}
+                <img src="assets/img/polluant-moyen.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM10_LABEL == "Dégradé" %}
+                <img src="assets/img/polluant-degrade.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM10_LABEL == "Mauvais" %}
+                <img src="assets/img/polluant-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM10_LABEL == "Très Mauvais" %}
+                <img src="assets/img/polluant-tres-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_PM10_LABEL == "Extrêmement Mauvais" %}
+                <img src="assets/img/polluant-extremement-mauvais.png" />
+              {% endif %}
+            <spacer size="16"></columns></row>
+
+          {% endif %}
+         {% if contact.SS_INDICE_NO2_LABEL %}
+          <row>
+          <columns small="6">
+            <spacer size="2"></spacer><p class="text-right small black">NO2&nbsp;&nbsp;&nbsp;</p></columns>
+          <columns small="6">
+              {% if contact.SS_INDICE_NO2_LABEL == "Bon" %}
+                <img src="assets/img/polluant-bon.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_NO2_LABEL == "Moyen" %}
+                <img src="assets/img/polluant-moyen.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_NO2_LABEL == "Dégradé" %}
+                <img src="assets/img/polluant-degrade.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_NO2_LABEL == "Mauvais" %}
+                <img src="assets/img/polluant-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_NO2_LABEL == "Très Mauvais" %}
+                <img src="assets/img/polluant-tres-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_NO2_LABEL == "Extrêmement Mauvais" %}
+                <img src="assets/img/polluant-extremement-mauvais.png" />
+              {% endif %}
+            <spacer size="16"></columns></row>
+
+          {% endif %}
+         {% if contact.SS_INDICE_O3_LABEL %}
+          <row>
+          <columns small="6">
+            <spacer size="2"></spacer><p class="text-right small black">O3&nbsp;&nbsp;&nbsp;</p></columns>
+          <columns small="6">
+              {% if contact.SS_INDICE_O3_LABEL == "Bon" %}
+                <img src="assets/img/polluant-bon.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_O3_LABEL == "Moyen" %}
+                <img src="assets/img/polluant-moyen.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_O3_LABEL == "Dégradé" %}
+                <img src="assets/img/polluant-degrade.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_O3_LABEL == "Mauvais" %}
+                <img src="assets/img/polluant-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_O3_LABEL == "Très Mauvais" %}
+                <img src="assets/img/polluant-tres-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_O3_LABEL == "Extrêmement Mauvais" %}
+                <img src="assets/img/polluant-extremement-mauvais.png" />
+              {% endif %}
+            <spacer size="16"></columns></row>
+
+          {% endif %}
+         {% if contact.SS_INDICE_SO2_LABEL %}
+          <row>
+          <columns small="6">
+            <spacer size="2"></spacer><p class="text-right small black">SO2&nbsp;&nbsp;&nbsp;</p></columns>
+          <columns small="6">
+              {% if contact.SS_INDICE_SO2_LABEL == "Bon" %}
+                <img src="assets/img/polluant-bon.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_SO2_LABEL == "Moyen" %}
+                <img src="assets/img/polluant-moyen.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_SO2_LABEL == "Dégradé" %}
+                <img src="assets/img/polluant-degrade.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_SO2_LABEL == "Mauvais" %}
+                <img src="assets/img/polluant-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_SO2_LABEL == "Très Mauvais" %}
+                <img src="assets/img/polluant-tres-mauvais.png" />
+              {% endif %}
+              {% if contact.SS_INDICE_SO2_LABEL == "Extrêmement Mauvais" %}
+                <img src="assets/img/polluant-extremement-mauvais.png" />
+              {% endif %}
+            <spacer size="16"></columns></row>
+
+          {% endif %}
         <spacer size="24"></spacer>
         <p class="text-center tiny">
           Prévision pour le \{{contact.QUALITE_AIR_VALIDITE}}<br />à \{{contact.VILLE}}
@@ -135,11 +269,15 @@ subject: Votre Recommandation Recosanté
         <p class="text-center tiny">
           L’indice peut être mis à jour à 14h,<br/><a href="\{{contact.LIEN_AASQA}}">retrouvez-le ici.</a>
         </p>
+        {% else %}
+        <p class="text-center">
+          L'indice de qualité de l'air à \{{contact.VILLE}} n'est pas disponible au moment de l'envoi de cet email.<br/><a href="\{{contact.LIEN_AASQA}}">Retrouvez-le ici.</a>
+        {% endif %} 
       </callout>
     </columns>
   </row>
   <spacer size="40"></spacer>
-  {% endif %} {% if contact.SHOW_RAEP %}
+  {% if contact.SHOW_RAEP %}
   <row>
     <columns>
       <callout class="success"
@@ -155,6 +293,7 @@ subject: Votre Recommandation Recosanté
         <spacer size="8"></spacer>
         <h2 class="text-center blue fat">\{{contact.RAEP|upper}}</h2>
         <spacer size="16"></spacer>
+       
         <row><columns>
         <table >
           {% if contact.ALLERGENE_CYPRES %}
