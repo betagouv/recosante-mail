@@ -27,7 +27,7 @@ subject: Votre Recommandation Recosanté
   <row>
     <columns>
       <p class="text-center">
-        <i>Aujourd’hui, votre recommandation est un conseil pratique pour \{{contact.OBJECTIF|lower}}</i>
+        <i>\{{contact.OBJECTIF}}</i>
       </p>
       <spacer size="16"></spacer>
       <p class="lead">
@@ -111,22 +111,22 @@ subject: Votre Recommandation Recosanté
         <h2 class="text-center blue fat no-margin">\{{contact.QUALITE_AIR|upper}}</h2>
         <center>
           {% if contact.QUALITE_AIR == "Bon" %}
-          <img src="assets/img/atmo-bon.png" />
+          <img src="assets/img/atmo-bon.png" alt="Bon" />
           {% endif %} 
           {% if contact.QUALITE_AIR == "Moyen" %}
-          <img src="assets/img/atmo-moyen.png" />
+          <img src="assets/img/atmo-moyen.png" alt="Moyen" />
           {% endif %} 
           {% if contact.QUALITE_AIR == "Dégradé" %}
-          <img src="assets/img/atmo-degrade.png" />
+          <img src="assets/img/atmo-degrade.png" alt="Dégradé" />
           {% endif %} 
           {% if contact.QUALITE_AIR == "Mauvais" %}
-          <img src="assets/img/atmo-mauvais.png" />
+          <img src="assets/img/atmo-mauvais.png" alt="Mauvais" />
           {% endif %} 
           {% if contact.QUALITE_AIR == "Très Mauvais" %}
-          <img src="assets/img/atmo-tres-mauvais.png" />
+          <img src="assets/img/atmo-tres-mauvais.png" alt="Très Mauvais" />
           {% endif %} 
           {% if contact.QUALITE_AIR == "Extrêmement Mauvais" %}
-          <img src="assets/img/atmo-extremement-mauvais.png" />
+          <img src="assets/img/atmo-extremement-mauvais.png" alt="Extrêmement Mauvais" />
           {% endif %} 
         </center>
         <spacer size="16"></spacer>
@@ -135,25 +135,25 @@ subject: Votre Recommandation Recosanté
          {% if contact.SS_INDICE_PM25_LABEL %}
           <row>
           <columns small="6">
-            <spacer size="2"></spacer><p class="text-right small black">PM2.5&nbsp;&nbsp;&nbsp;</p></columns>
+            <spacer size="2"></spacer><p class="text-right small black">PM2.5</p></columns>
           <columns small="6">
               {% if contact.SS_INDICE_PM25_LABEL == "Bon" %}
-                <img src="assets/img/polluant-bon.png" />
+                <img src="assets/img/polluant-bon.png"  alt="Bon" />
               {% endif %}
               {% if contact.SS_INDICE_PM25_LABEL == "Moyen" %}
-                <img src="assets/img/polluant-moyen.png" />
+                <img src="assets/img/polluant-moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.SS_INDICE_PM25_LABEL == "Dégradé" %}
-                <img src="assets/img/polluant-degrade.png" />
+                <img src="assets/img/polluant-degrade.png" alt="Dégradé" />
               {% endif %}
               {% if contact.SS_INDICE_PM25_LABEL == "Mauvais" %}
-                <img src="assets/img/polluant-mauvais.png" />
+                <img src="assets/img/polluant-mauvais.png" alt="Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_PM25_LABEL == "Très Mauvais" %}
-                <img src="assets/img/polluant-tres-mauvais.png" />
+                <img src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_PM25_LABEL == "Extrêmement Mauvais" %}
-                <img src="assets/img/polluant-extremement-mauvais.png" />
+                <img src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
               {% endif %}
             <spacer size="16"></columns></row>
 
@@ -161,25 +161,25 @@ subject: Votre Recommandation Recosanté
          {% if contact.SS_INDICE_PM10_LABEL %}
           <row>
           <columns small="6">
-            <spacer size="2"></spacer><p class="text-right small black">PM10&nbsp;&nbsp;&nbsp;</p></columns>
+            <spacer size="2"></spacer><p class="text-right small black">PM10</p></columns>
           <columns small="6">
               {% if contact.SS_INDICE_PM10_LABEL == "Bon" %}
-                <img src="assets/img/polluant-bon.png" />
+                <img src="assets/img/polluant-bon.png"  alt="Bon" />
               {% endif %}
               {% if contact.SS_INDICE_PM10_LABEL == "Moyen" %}
-                <img src="assets/img/polluant-moyen.png" />
+                <img src="assets/img/polluant-moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.SS_INDICE_PM10_LABEL == "Dégradé" %}
-                <img src="assets/img/polluant-degrade.png" />
+                <img src="assets/img/polluant-degrade.png" alt="Dégradé" />
               {% endif %}
               {% if contact.SS_INDICE_PM10_LABEL == "Mauvais" %}
-                <img src="assets/img/polluant-mauvais.png" />
+                <img src="assets/img/polluant-mauvais.png" alt="Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_PM10_LABEL == "Très Mauvais" %}
-                <img src="assets/img/polluant-tres-mauvais.png" />
+                <img src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_PM10_LABEL == "Extrêmement Mauvais" %}
-                <img src="assets/img/polluant-extremement-mauvais.png" />
+                <img src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
               {% endif %}
             <spacer size="16"></columns></row>
 
@@ -187,25 +187,25 @@ subject: Votre Recommandation Recosanté
          {% if contact.SS_INDICE_NO2_LABEL %}
           <row>
           <columns small="6">
-            <spacer size="2"></spacer><p class="text-right small black">NO2&nbsp;&nbsp;&nbsp;</p></columns>
+            <spacer size="2"></spacer><p class="text-right small black">NO2</p></columns>
           <columns small="6">
               {% if contact.SS_INDICE_NO2_LABEL == "Bon" %}
-                <img src="assets/img/polluant-bon.png" />
+                <img src="assets/img/polluant-bon.png"  alt="Bon" />
               {% endif %}
               {% if contact.SS_INDICE_NO2_LABEL == "Moyen" %}
-                <img src="assets/img/polluant-moyen.png" />
+                <img src="assets/img/polluant-moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.SS_INDICE_NO2_LABEL == "Dégradé" %}
-                <img src="assets/img/polluant-degrade.png" />
+                <img src="assets/img/polluant-degrade.png" alt="Dégradé" />
               {% endif %}
               {% if contact.SS_INDICE_NO2_LABEL == "Mauvais" %}
-                <img src="assets/img/polluant-mauvais.png" />
+                <img src="assets/img/polluant-mauvais.png" alt="Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_NO2_LABEL == "Très Mauvais" %}
-                <img src="assets/img/polluant-tres-mauvais.png" />
+                <img src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_NO2_LABEL == "Extrêmement Mauvais" %}
-                <img src="assets/img/polluant-extremement-mauvais.png" />
+                <img src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
               {% endif %}
             <spacer size="16"></columns></row>
 
@@ -213,25 +213,25 @@ subject: Votre Recommandation Recosanté
          {% if contact.SS_INDICE_O3_LABEL %}
           <row>
           <columns small="6">
-            <spacer size="2"></spacer><p class="text-right small black">O3&nbsp;&nbsp;&nbsp;</p></columns>
+            <spacer size="2"></spacer><p class="text-right small black">O3</p></columns>
           <columns small="6">
               {% if contact.SS_INDICE_O3_LABEL == "Bon" %}
-                <img src="assets/img/polluant-bon.png" />
+                <img src="assets/img/polluant-bon.png"  alt="Bon" />
               {% endif %}
               {% if contact.SS_INDICE_O3_LABEL == "Moyen" %}
-                <img src="assets/img/polluant-moyen.png" />
+                <img src="assets/img/polluant-moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.SS_INDICE_O3_LABEL == "Dégradé" %}
-                <img src="assets/img/polluant-degrade.png" />
+                <img src="assets/img/polluant-degrade.png" alt="Dégradé" />
               {% endif %}
               {% if contact.SS_INDICE_O3_LABEL == "Mauvais" %}
-                <img src="assets/img/polluant-mauvais.png" />
+                <img src="assets/img/polluant-mauvais.png" alt="Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_O3_LABEL == "Très Mauvais" %}
-                <img src="assets/img/polluant-tres-mauvais.png" />
+                <img src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_O3_LABEL == "Extrêmement Mauvais" %}
-                <img src="assets/img/polluant-extremement-mauvais.png" />
+                <img src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
               {% endif %}
             <spacer size="16"></columns></row>
 
@@ -239,25 +239,25 @@ subject: Votre Recommandation Recosanté
          {% if contact.SS_INDICE_SO2_LABEL %}
           <row>
           <columns small="6">
-            <spacer size="2"></spacer><p class="text-right small black">SO2&nbsp;&nbsp;&nbsp;</p></columns>
+            <spacer size="2"></spacer><p class="text-right small black">SO2</p></columns>
           <columns small="6">
               {% if contact.SS_INDICE_SO2_LABEL == "Bon" %}
-                <img src="assets/img/polluant-bon.png" />
+                <img src="assets/img/polluant-bon.png"  alt="Bon" />
               {% endif %}
               {% if contact.SS_INDICE_SO2_LABEL == "Moyen" %}
-                <img src="assets/img/polluant-moyen.png" />
+                <img src="assets/img/polluant-moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.SS_INDICE_SO2_LABEL == "Dégradé" %}
-                <img src="assets/img/polluant-degrade.png" />
+                <img src="assets/img/polluant-degrade.png" alt="Dégradé" />
               {% endif %}
               {% if contact.SS_INDICE_SO2_LABEL == "Mauvais" %}
-                <img src="assets/img/polluant-mauvais.png" />
+                <img src="assets/img/polluant-mauvais.png" alt="Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_SO2_LABEL == "Très Mauvais" %}
-                <img src="assets/img/polluant-tres-mauvais.png" />
+                <img src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
               {% endif %}
               {% if contact.SS_INDICE_SO2_LABEL == "Extrêmement Mauvais" %}
-                <img src="assets/img/polluant-extremement-mauvais.png" />
+                <img src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
               {% endif %}
             <spacer size="16"></columns></row>
 
@@ -300,19 +300,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Cypres&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CYPRES == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_CYPRES == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_CYPRES == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_CYPRES == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_CYPRES == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -321,19 +321,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Noisetier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_NOISETIER == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_NOISETIER == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_NOISETIER == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_NOISETIER == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_NOISETIER == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -342,19 +342,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Aulne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_AULNE == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_AULNE == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_AULNE == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_AULNE == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_AULNE == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -363,19 +363,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Peuplier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PEUPLIER == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_PEUPLIER == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_PEUPLIER == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_PEUPLIER == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_PEUPLIER == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -384,19 +384,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Saule&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_SAULE == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_SAULE == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_SAULE == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_SAULE == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_SAULE == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -405,19 +405,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Frêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_FRENE == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_FRENE == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_FRENE == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_FRENE == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_FRENE == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -426,19 +426,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Charme&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHARME == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHARME == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHARME == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_CHARME == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_CHARME == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -447,19 +447,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Bouleau&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_BOULEAU == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_BOULEAU == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_BOULEAU == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_BOULEAU == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_BOULEAU == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -468,19 +468,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Platane&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PLATANE == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_PLATANE == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_PLATANE == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_PLATANE == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_PLATANE == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -489,19 +489,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Chêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHENE == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHENE == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHENE == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_CHENE == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_CHENE == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -510,19 +510,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Olivier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_OLIVIER == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_OLIVIER == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_OLIVIER == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_OLIVIER == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_OLIVIER == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -531,19 +531,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Tilleul&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_TILLEUL == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_TILLEUL == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_TILLEUL == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_TILLEUL == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_TILLEUL == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -553,19 +553,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Châtaignier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_CHATAIGNER == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHATAIGNER == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_CHATAIGNER == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_CHATAIGNER == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_CHATAIGNER == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -574,19 +574,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Rumex&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_RUMEX == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_RUMEX == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_RUMEX == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_RUMEX == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_RUMEX == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -595,19 +595,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Graminées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_GRAMINEES == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_GRAMINEES == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_GRAMINEES == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_GRAMINEES == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_GRAMINEES == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -616,19 +616,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Plantain&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_PLANTAIN == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_PLANTAIN == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_PLANTAIN == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_PLANTAIN == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_PLANTAIN == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -637,19 +637,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Urticacées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_URTICACEES == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_URTICACEES == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_URTICACEES == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_URTICACEES == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_URTICACEES == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -658,19 +658,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Armoises&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_ARMOISES == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_ARMOISES == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_ARMOISES == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_ARMOISES == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_ARMOISES == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -679,19 +679,19 @@ subject: Votre Recommandation Recosanté
           <tr>
             <td><p class="text-right small black">Ambroisies&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
               {% if contact.ALLERGENE_AMBROISIES == 1 %}
-                <img src="assets/img/tres-faible.png" />
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
               {% endif %}
               {% if contact.ALLERGENE_AMBROISIES == 2 %}
-                <img src="assets/img/faible.png" />
+                <img src="assets/img/faible.png" alt="Faible" />
               {% endif %}
               {% if contact.ALLERGENE_AMBROISIES == 3 %}
-                <img src="assets/img/moyen.png" />
+                <img src="assets/img/moyen.png" alt="Moyen" />
               {% endif %}
               {% if contact.ALLERGENE_AMBROISIES == 4 %}
-                <img src="assets/img/eleve.png" />
+                <img src="assets/img/eleve.png" alt="Élevé" />
               {% endif %}
               {% if contact.ALLERGENE_AMBROISIES == 5 %}
-                <img src="assets/img/tres-eleve.png" />
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
               {% endif %}
             <spacer size="16"></td>
           </tr>
@@ -766,10 +766,15 @@ subject: Votre Recommandation Recosanté
           Les données sont fournies par
       </h6>
       <p class="text-right tiny">
-       <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a><br /><a
-            href="https://www.pollens.fr/"
-            >Le Réseau national de surveillance aérobiologique</a
-          >
+       <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a>
+       <br />
+        {% if contact.POLLINARIUM_SENTINELLE %}
+          <a href="https://www.alertepollens.org/">Pollinariums sentinelles</a>
+          <br />
+       {% endif %}
+       <a
+        href="https://www.pollens.fr/"
+      >Le Réseau national de surveillance aérobiologique</a>
       </p>
     </columns></row>
 </container>
