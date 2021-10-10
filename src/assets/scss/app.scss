@@ -12,6 +12,7 @@ th.callout-inner {
   padding-bottom: 16px;
   padding-left: 16px;
   padding-right: 16px;
+  border-radius: $global-radius;
 }
 
 th.callout-inner.success {
@@ -29,6 +30,10 @@ th.callout-inner.secondary {
 }
 .hide-for-large {
   display: block !important;
+}
+
+strong {
+  font-family: $header-font-family;
 }
 
 .color {
@@ -49,9 +54,10 @@ th.callout-inner.secondary {
 .small {
   font-size: 14px;
 }
-.fat {
-  font-weight: 900;
-}
+
 .no-margin {
   margin-bottom: 0;
+}
+sup {
+  line-height: 0;
 }

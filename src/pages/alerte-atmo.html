@@ -1,0 +1,79 @@
+---
+subject: Indicateurs quotidiens
+---
+
+<spacer size="20"></spacer>
+<container>
+  <row>
+    <columns>
+      <a href="https://recosante.beta.gouv.fr/">
+        <img
+          src="assets/img/logos.jpg"
+          alt="République Française et Recosanté"
+        />
+      </a>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  <row>
+    <columns>
+      <p>
+        <strong>\{{contact.VILLE}}</strong>, le \{{ time_now|date:"02/01/2006"
+        }}
+      </p>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+
+  <row>
+    <columns>
+      <callout class="alert">
+        <spacer size="8"></spacer>
+        <h3 class="text-center">
+          ⚠️ <br />Un épisode de pollution \{{contact.POLLUANT}} est prévu
+          aujourd'hui dans votre département.
+        </h3>
+        <spacer size="8"></spacer>
+        <center>
+          <button class="radius" href="\{{contact.LIEN_AASQA}}">
+            En savoir plus
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+
+  <row>
+    <columns>
+      <img src="assets/img/logos.jpg" alt="République Française et Recosanté" />
+    </columns>
+    <columns>
+      <p class="text-right tiny">
+        Les données sont fournies par
+        <br />
+        <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a>
+        <br />
+        {% if contact.POLLINARIUM_SENTINELLE %}
+        <a href="https://www.alertepollens.org/">Pollinariums sentinelles</a>
+        <br />
+        {% endif %}
+        <a href="https://www.pollens.fr/"
+          >Le Réseau national de surveillance aérobiologique</a
+        >
+      </p>
+      <p class="text-right tiny">
+        <a
+          href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}"
+          >Voir dans le navigateur</a
+        >
+        <br />
+        <a
+          href="https://recosante.beta.gouv.fr/profil?user=\{{contact.USER_UID}}"
+          >Modifier mes préférences ou me désinscrire</a
+        >
+      </p></columns
+    >
+  </row>
+</container>
+<spacer size="40"></spacer>

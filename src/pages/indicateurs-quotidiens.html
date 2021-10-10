@@ -1,0 +1,730 @@
+---
+subject: Indicateurs quotidiens
+---
+
+<spacer size="20"></spacer>
+<container>
+  <row>
+    <columns>
+        <a href="https://recosante.beta.gouv.fr/">
+          <img src="assets/img/logos.jpg" alt="République Française et Recosanté" />
+        </a>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  <row>
+    <columns>
+      <p class="lead">
+        <strong>\{{contact.VILLE}}</strong>, le \{{ time_now|date:"02/01/2006" }}
+      </p>
+    </columns>
+  </row>
+
+  <spacer size="40"></spacer>
+  {% if contact.SHOW_QA %}
+  {% if contact.POLLUANT %}
+  <row>
+    <columns>
+      <callout class="alert">
+        <spacer size="8"></spacer>
+        <h3 class="text-center">
+          ⚠️ <br />Un épisode de pollution \{{contact.POLLUANT}} est prévu
+          aujourd'hui dans votre département.
+        </h3>
+        <spacer size="8"></spacer>
+        <center>
+          <button
+            class="radius"
+            href="\{{contact.LIEN_AASQA}}"
+          >
+            En savoir plus
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %} 
+  {% endif %} 
+  {% if contact.SHOW_QA %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <p class="no-margin">Indice ATMO de qualité de l'air</p>
+        <spacer size="16"></spacer>
+
+        {% if contact.QUALITE_AIR %}
+        <h2 class="text-center blue no-margin">\{{contact.QUALITE_AIR}}</h2>
+        <center>
+          {% if contact.QUALITE_AIR == "Bon" %}
+          <img src="assets/img/atmo-bon.png" alt="Bon" />
+          {% endif %} 
+          {% if contact.QUALITE_AIR == "Moyen" %}
+          <img src="assets/img/atmo-moyen.png" alt="Moyen" />
+          {% endif %} 
+          {% if contact.QUALITE_AIR == "Dégradé" %}
+          <img src="assets/img/atmo-degrade.png" alt="Dégradé" />
+          {% endif %} 
+          {% if contact.QUALITE_AIR == "Mauvais" %}
+          <img src="assets/img/atmo-mauvais.png" alt="Mauvais" />
+          {% endif %} 
+          {% if contact.QUALITE_AIR == "Très Mauvais" %}
+          <img src="assets/img/atmo-tres-mauvais.png" alt="Très Mauvais" />
+          {% endif %} 
+          {% if contact.QUALITE_AIR == "Extrêmement Mauvais" %}
+          <img src="assets/img/atmo-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+          {% endif %} 
+        </center>
+        <spacer size="16"></spacer>
+
+        
+        {% if contact.SS_INDICE_PM25_LABEL %}
+        <row>
+          <columns small="6">
+            {% if contact.SS_INDICE_PM25_LABEL == "Bon" %}
+              <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM25_LABEL == "Moyen" %}
+              <img class="float-right" src="assets/img/polluant-moyen.png" alt="Moyen" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM25_LABEL == "Dégradé" %}
+              <img class="float-right" src="assets/img/polluant-degrade.png" alt="Dégradé" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM25_LABEL == "Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-mauvais.png" alt="Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM25_LABEL == "Très Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM25_LABEL == "Extrêmement Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+            {% endif %}
+            <spacer size="16">
+          </columns>
+          <columns small="6">
+            <spacer size="2"></spacer><span>&nbsp;</span>
+            <a href="https://recosante.beta.gouv.fr/polluants/pm25" class=" small">PM2,5 <sup>(?)</sup></p>
+          </columns>
+        </row>
+        {% endif %}
+          
+        {% if contact.SS_INDICE_PM10_LABEL %}
+        <row>
+          <columns small="6">
+            {% if contact.SS_INDICE_PM10_LABEL == "Bon" %}
+              <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM10_LABEL == "Moyen" %}
+              <img class="float-right" src="assets/img/polluant-moyen.png" alt="Moyen" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM10_LABEL == "Dégradé" %}
+              <img class="float-right" src="assets/img/polluant-degrade.png" alt="Dégradé" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM10_LABEL == "Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-mauvais.png" alt="Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM10_LABEL == "Très Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_PM10_LABEL == "Extrêmement Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+            {% endif %}
+            <spacer size="16">
+          </columns>
+          <columns small="6">
+            <spacer size="2"></spacer><span>&nbsp;</span>
+            <a href="https://recosante.beta.gouv.fr/polluants/pm10" class=" small">PM10 <sup>(?)</sup></p>
+          </columns>
+        </row>
+        {% endif %}
+
+        {% if contact.SS_INDICE_NO2_LABEL %}
+        <row>
+          <columns small="6">
+            {% if contact.SS_INDICE_NO2_LABEL == "Bon" %}
+              <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
+            {% endif %}
+            {% if contact.SS_INDICE_NO2_LABEL == "Moyen" %}
+              <img class="float-right" src="assets/img/polluant-moyen.png" alt="Moyen" />
+            {% endif %}
+            {% if contact.SS_INDICE_NO2_LABEL == "Dégradé" %}
+              <img class="float-right" src="assets/img/polluant-degrade.png" alt="Dégradé" />
+            {% endif %}
+            {% if contact.SS_INDICE_NO2_LABEL == "Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-mauvais.png" alt="Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_NO2_LABEL == "Très Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_NO2_LABEL == "Extrêmement Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+            {% endif %}
+            <spacer size="16">
+          </columns>
+          <columns small="6">
+            <spacer size="2"></spacer><span>&nbsp;</span>
+            <a href="https://recosante.beta.gouv.fr/polluants/no2" class="small">NO2 <sup>(?)</sup></p>
+          </columns>
+        </row>
+        {% endif %}
+
+        {% if contact.SS_INDICE_O3_LABEL %}
+        <row>
+          <columns small="6">
+            {% if contact.SS_INDICE_O3_LABEL == "Bon" %}
+              <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
+            {% endif %}
+            {% if contact.SS_INDICE_O3_LABEL == "Moyen" %}
+              <img class="float-right" src="assets/img/polluant-moyen.png" alt="Moyen" />
+            {% endif %}
+            {% if contact.SS_INDICE_O3_LABEL == "Dégradé" %}
+              <img class="float-right" src="assets/img/polluant-degrade.png" alt="Dégradé" />
+            {% endif %}
+            {% if contact.SS_INDICE_O3_LABEL == "Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-mauvais.png" alt="Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_O3_LABEL == "Très Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_O3_LABEL == "Extrêmement Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+            {% endif %}
+            <spacer size="16">
+          </columns>
+          <columns small="6">
+            <spacer size="2"></spacer><span>&nbsp;</span>
+            <a href="https://recosante.beta.gouv.fr/polluants/o3" class="small">O3 <sup>(?)</sup></p>
+          </columns>
+        </row>
+        {% endif %}
+
+        {% if contact.SS_INDICE_SO2_LABEL %}
+        <row>
+          <columns small="6">
+            {% if contact.SS_INDICE_SO2_LABEL == "Bon" %}
+              <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
+            {% endif %}
+            {% if contact.SS_INDICE_SO2_LABEL == "Moyen" %}
+              <img class="float-right" src="assets/img/polluant-moyen.png" alt="Moyen" />
+            {% endif %}
+            {% if contact.SS_INDICE_SO2_LABEL == "Dégradé" %}
+              <img class="float-right" src="assets/img/polluant-degrade.png" alt="Dégradé" />
+            {% endif %}
+            {% if contact.SS_INDICE_SO2_LABEL == "Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-mauvais.png" alt="Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_SO2_LABEL == "Très Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-tres-mauvais.png" alt="Très Mauvais" />
+            {% endif %}
+            {% if contact.SS_INDICE_SO2_LABEL == "Extrêmement Mauvais" %}
+              <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
+            {% endif %}
+            <spacer size="16">
+          </columns>
+          <columns small="6">
+            <spacer size="2"></spacer><span>&nbsp;</span>
+            <a href="https://recosante.beta.gouv.fr/polluants/so2" class="small">SO2 <sup>(?)</sup></p>
+          </columns>
+        </row>
+        {% endif %}
+
+        <spacer size="24"></spacer>
+
+        <p class="text-center">
+          \{{contact.RECOMMANDATION_QA|safe}}
+        </p>
+
+        <spacer size="24"></spacer>
+
+        <p class="text-center tiny">
+          Prévision pour le \{{contact.QUALITE_AIR_VALIDITE}}<br />à \{{contact.VILLE}}
+        </p>
+        <p class="text-center tiny">
+          L’indice peut être mis à jour à 14h,<br/><a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">retrouvez-le ici.</a>
+        </p>
+        {% else %}
+        <p class="text-center">
+          L'indice de qualité de l'air à \{{contact.VILLE}} n'est pas disponible au moment de l'envoi de cet email.<br/><a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">Retrouvez-le ici.</a>
+        {% endif %} 
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %} 
+  {% if contact.SHOW_RAEP %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <p class="no-margin">Risque d'allergie aux pollens</p>
+        <spacer size="16"></spacer>
+        <h2 class="text-center blue">\{{contact.RAEP}}</h2>
+        <spacer size="16"></spacer>
+       
+        <row><columns>
+        <table >
+          {% if contact.ALLERGENE_CYPRES %}
+          <tr>
+            <td><p class="text-right small black">Cypres&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_CYPRES == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CYPRES == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CYPRES == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_CYPRES == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_CYPRES == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_NOISETIER %}
+          <tr>
+            <td><p class="text-right small black">Noisetier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_NOISETIER == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_NOISETIER == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_NOISETIER == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_NOISETIER == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_NOISETIER == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_AULNE %}
+          <tr>
+            <td><p class="text-right small black">Aulne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_AULNE == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_AULNE == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_AULNE == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_AULNE == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_AULNE == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_PEUPLIER %}
+          <tr>
+            <td><p class="text-right small black">Peuplier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_PEUPLIER == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PEUPLIER == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PEUPLIER == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_PEUPLIER == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_PEUPLIER == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_SAULE %}
+          <tr>
+            <td><p class="text-right small black">Saule&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_SAULE == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_SAULE == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_SAULE == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_SAULE == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_SAULE == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_FRENE %}
+          <tr>
+            <td><p class="text-right small black">Frêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_FRENE == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_FRENE == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_FRENE == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_FRENE == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_FRENE == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_CHARME %}
+          <tr>
+            <td><p class="text-right small black">Charme&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_CHARME == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHARME == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHARME == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHARME == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHARME == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_BOULEAU %}
+          <tr>
+            <td><p class="text-right small black">Bouleau&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_BOULEAU == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_BOULEAU == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_BOULEAU == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_BOULEAU == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_BOULEAU == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_PLATANE %}
+          <tr>
+            <td><p class="text-right small black">Platane&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_PLATANE == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLATANE == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLATANE == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLATANE == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLATANE == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_CHENE %}
+          <tr>
+            <td><p class="text-right small black">Chêne&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_CHENE == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHENE == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHENE == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHENE == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHENE == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_OLIVIER %}
+          <tr>
+            <td><p class="text-right small black">Olivier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_OLIVIER == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_OLIVIER == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_OLIVIER == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_OLIVIER == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_OLIVIER == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_TILLEUL %}
+          <tr>
+            <td><p class="text-right small black">Tilleul&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_TILLEUL == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_TILLEUL == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_TILLEUL == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_TILLEUL == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_TILLEUL == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+         
+          {% if contact.ALLERGENE_CHATAIGNER %}
+          <tr>
+            <td><p class="text-right small black">Châtaignier&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_CHATAIGNER == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHATAIGNER == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHATAIGNER == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHATAIGNER == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_CHATAIGNER == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_RUMEX %}
+          <tr>
+            <td><p class="text-right small black">Rumex&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_RUMEX == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_RUMEX == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_RUMEX == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_RUMEX == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_RUMEX == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_GRAMINEES %}
+          <tr>
+            <td><p class="text-right small black">Graminées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_GRAMINEES == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_GRAMINEES == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_GRAMINEES == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_GRAMINEES == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_GRAMINEES == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_PLANTAIN %}
+          <tr>
+            <td><p class="text-right small black">Plantain&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_PLANTAIN == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLANTAIN == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLANTAIN == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLANTAIN == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_PLANTAIN == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_URTICACEES %}
+          <tr>
+            <td><p class="text-right small black">Urticacées&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_URTICACEES == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_URTICACEES == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_URTICACEES == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_URTICACEES == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_URTICACEES == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_ARMOISES %}
+          <tr>
+            <td><p class="text-right small black">Armoises&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_ARMOISES == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_ARMOISES == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_ARMOISES == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_ARMOISES == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_ARMOISES == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+          {% if contact.ALLERGENE_AMBROISIES %}
+          <tr>
+            <td><p class="text-right small black">Ambroisies&nbsp;&nbsp;&nbsp;</p></td><td><spacer size="2"></spacer>
+              {% if contact.ALLERGENE_AMBROISIES == 1 %}
+                <img src="assets/img/tres-faible.png" alt="Très faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_AMBROISIES == 2 %}
+                <img src="assets/img/faible.png" alt="Faible" />
+              {% endif %}
+              {% if contact.ALLERGENE_AMBROISIES == 3 %}
+                <img src="assets/img/moyen.png" alt="Moyen" />
+              {% endif %}
+              {% if contact.ALLERGENE_AMBROISIES == 4 %}
+                <img src="assets/img/eleve.png" alt="Élevé" />
+              {% endif %}
+              {% if contact.ALLERGENE_AMBROISIES == 5 %}
+                <img src="assets/img/tres-eleve.png" alt="Très Élevé" />
+              {% endif %}
+            <spacer size="16"></td>
+          </tr>
+          {% endif %}
+        </table></columns></row>
+
+        <spacer size="24"></spacer>
+
+        <p class="text-center">
+          \{{contact.RECOMMANDATION_RAEP|safe}}
+        </p>
+
+        <spacer size="24"></spacer>
+        <p class="text-center tiny">
+          Prévision du \{{contact.RAEP_DEBUT_VALIDITE}} au \{{contact.RAEP_FIN_VALIDITE}}<br />\{{contact.DEPARTEMENT_PREPOSITION}}
+          \{{contact.DEPARTEMENT}}
+        </p>
+     
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %}
+  <row>
+    <columns>
+      <h6 class="text-center blue">Partager Recosanté</h6>
+    </columns>
+  </row>
+  <spacer size="8"></spacer>
+  <row>
+    <columns small="5" large="5">
+      <a
+        href="mailto:?subject=Tu%20veux%20conna%C3%AEtre%20la%20qualit%C3%A9%20de%20l%27environnement%20autour%20de%20toi%20?&body=C%27est%20facile%20gr%C3%A2ce%20%C3%A0%20Recosant%C3%A9%20!%20Tu%20peux%20choisir%20les%20indicateurs%20qui%20t%27int%C3%A9ressent%20(qualit%C3%A9%20de%20l%27air,%20risque%20d%27allergie%20aux%20pollens,%20qualit%C3%A9%20de%20l%27eau%20de%20boisson,%20etc.)%20et%20tu%20les%20re%C3%A7ois%20%C3%A0%20la%20fr%C3%A9quence%20que%20tu%20choisis%20:%20tous%20les%20jours%20ou%20uniquement%20quand%20il%20y%20a%20une%20alerte.%20Recosant%C3%A9%20propose%20aussi%20des%20recommandations%20associ%C3%A9es%20pour%20limiter%20les%20effets%20de%20l%27environnement%20sur%20la%20sant%C3%A9.%0AEt%20en%20plus,%20c%27est%20compl%C3%A8tement%20gratuit.%20Pour%20t%27inscrire%20:%20https://recosante.beta.gouv.fr"
+        ><img class="float-right" src="assets/img/mail.png"
+      /></a>
+    </columns>
+    <columns small="2"> </columns>
+    <columns small="5" large="5">
+      <a
+        href="https://wa.me/?text=Tu%20connais%20Recosant%C3%A9%20%3F%20C%27est%20une%20lettre%20d%27information%20quotidienne%20qui%20te%20donne%20des%20conseils%20personnalis%C3%A9s%20en%20fonction%20de%20tes%20habitudes%20pour%20te%20prot%C3%A9ger%20des%20impacts%20de%20la%20qualit%C3%A9%20de%20l%E2%80%99air%20sur%20ta%20sant%C3%A9.%20Tous%20les%20matins%2C%20tu%20re%C3%A7ois%20un%20mail%20qui%20t%27informe%20de%20la%20qualit%C3%A9%20de%20l%27air%20autour%20de%20chez%20toi%20et%20une%20recommandation%20pour%20adapter%20ton%20comportement%20et%2Fou%20tes%20activit%C3%A9s%20en%20fonction.%20Pour%20t%27inscrire%20%3A%20http%3A%2F%2Frecosante.beta.gouv.fr%2F%3Futm_source%3Dreferral"
+        ><img class="float-left" src="assets/img/whatsapp.png" / ></a
+      >
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+
+  <row>
+    <columns>
+      <img src="assets/img/logos.jpg" alt="République Française et Recosanté" />
+    </columns> 
+    <columns>
+      <p class="text-right tiny">
+        Les données sont fournies par
+        <br/>
+        <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a>
+        <br />
+        {% if contact.POLLINARIUM_SENTINELLE %}
+          <a href="https://www.alertepollens.org/">Pollinariums sentinelles</a>
+          <br />
+        {% endif %}
+        <a href="https://www.pollens.fr/">Le Réseau national de surveillance aérobiologique</a>
+      </p>
+      <p class="text-right tiny">
+      <a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">Voir dans le navigateur</a>
+      <br/>
+      <a href="https://recosante.beta.gouv.fr/profil?user=\{{contact.USER_UID}}">Modifier mes préférences ou me désinscrire</a>
+    </columns>
+  </row>
+</container>
+<spacer size="40"></spacer>

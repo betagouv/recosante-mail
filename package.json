@@ -10,7 +10,7 @@
     "mail": "gulp mail --production"
   },
   "dependencies": {
-    "foundation-emails": "^2.2.1"
+    "foundation-emails": "^2.3.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
