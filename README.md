@@ -1,10 +1,12 @@
 # Mail Recosante
 
-Mail de la startup d'état Recosanté
+Mail indicateur de la startup d'état Recosanté
 
 https://recosante.beta.gouv.fr
 
 ## Développement
+
+Nécessite Node < 16 pour compiler
 
 `yarn` pour installer l'application
 

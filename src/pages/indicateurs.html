@@ -44,6 +44,17 @@ subject: Indicateurs quotidiens
     </columns>
   </row>
   <spacer size="40"></spacer>
+  <row>
+    <columns>
+      <callout class="warning">
+        <p class="no-margin text-center"><b>Vigilance météo</b></p>
+        <spacer size="16"></spacer>
+        <h2 class="text-center blue no-margin">Vigilance Orange</h2>
+      </callout>
+    </columns>
+  </row>
+
+  <spacer size="40"></spacer>
   {% endif %} 
   {% endif %} 
   {% if contact.SHOW_QA %}
@@ -744,7 +755,7 @@ subject: Indicateurs quotidiens
       <p class="text-right tiny">
       <a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">Voir dans le navigateur</a>
       <br/>
-      <a href="https://recosante.beta.gouv.fr/profil?user=\{{contact.USER_UID}}">Modifier mes préférences ou me désinscrire</a>
+      <a href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}">Modifier mes préférences ou me désinscrire</a>
     </columns>
   </row>
 </container>
