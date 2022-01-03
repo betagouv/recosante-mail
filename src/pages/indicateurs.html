@@ -43,16 +43,7 @@ subject: Indicateurs quotidiens
       </callout>
     </columns>
   </row>
-  <spacer size="40"></spacer>
-  <row>
-    <columns>
-      <callout class="warning">
-        <p class="no-margin text-center"><b>Vigilance météo</b></p>
-        <spacer size="16"></spacer>
-        <h2 class="text-center blue no-margin">Vigilance Orange</h2>
-      </callout>
-    </columns>
-  </row>
+  
 
   <spacer size="40"></spacer>
   {% endif %} 
@@ -753,7 +744,7 @@ subject: Indicateurs quotidiens
         <a href="https://www.pollens.fr/">Le Réseau national de surveillance aérobiologique</a>
       </p>
       <p class="text-right tiny">
-      <a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">Voir dans le navigateur</a>
+      <a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE|lower }}">Voir dans le navigateur</a>
       <br/>
       <a href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}">Modifier mes préférences ou me désinscrire</a>
     </columns>
