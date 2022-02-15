@@ -52,258 +52,6 @@ subject: Indicateurs quotidiens
   {% endif %} 
   {% endif %} 
 
-  {% if contact.SHOW_VIGILANCE %}
-  <row>
-    <columns>
-      <callout class="warning">
-        <p class="no-margin text-center"><b>Vigilance météo</b></p>
-        <spacer size="16"></spacer>
-        <h2 class="text-center blue no-margin">Vigilance \{{contact.VIGILANCE_GLOBALE_COULEUR}}</h2>
-        <spacer size="24"></spacer>
-        {% if contact.VIGILANCE_AVALANCHES_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Rouge" %}
-            <img src="assets/img/avalanche_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Orange" %}
-            <img src="assets/img/avalanche_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Jaune" %}
-            <img src="assets/img/avalanche_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Avalanches</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_AVALANCHES_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_AVALANCHES_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_CANICULE_COULEUR == "Rouge" %}
-            <img src="assets/img/canicule_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_CANICULE_COULEUR == "Orange" %}
-            <img src="assets/img/canicule_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_CANICULE_COULEUR == "Jaune" %}
-            <img src="assets/img/canicule_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Canicules</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_CANICULE_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_CRUES_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_CRUES_COULEUR == "Rouge" %}
-            <img src="assets/img/crues_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_CRUES_COULEUR == "Orange" %}
-            <img src="assets/img/crues_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_CRUES_COULEUR == "Jaune" %}
-            <img src="assets/img/crues_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Crues</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_CRUES_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_FROID_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_FROID_COULEUR == "Rouge" %}
-            <img src="assets/img/froid_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_FROID_COULEUR == "Orange" %}
-            <img src="assets/img/froid_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_FROID_COULEUR == "Jaune" %}
-            <img src="assets/img/froid_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Grand froid</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_FROID_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_NEIGE_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_NEIGE_COULEUR == "Rouge" %}
-            <img src="assets/img/neige_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_NEIGE_COULEUR == "Orange" %}
-            <img src="assets/img/neige_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_NEIGE_COULEUR == "Jaune" %}
-            <img src="assets/img/neige_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Neige-verglas</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_NEIGE_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_ORAGE_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_ORAGES_COULEUR == "Rouge" %}
-            <img src="assets/img/orages_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_ORAGES_COULEUR == "Orange" %}
-            <img src="assets/img/orages_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_ORAGES_COULEUR == "Jaune" %}
-            <img src="assets/img/orages_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Orages</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_ORAGES_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_PLUIE_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_PLUIE_COULEUR == "Rouge" %}
-            <img src="assets/img/pluie_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_PLUIE_COULEUR == "Orange" %}
-            <img src="assets/img/pluie_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_PLUIE_COULEUR == "Jaune" %}
-            <img src="assets/img/pluie_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Pluie-inondation</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_PLUIE_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_VAGUES_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_VAGUES_COULEUR == "Rouge" %}
-            <img src="assets/img/vagues_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_VAGUES_COULEUR == "Orange" %}
-            <img src="assets/img/vagues_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_VAGUES_COULEUR == "Jaune" %}
-            <img src="assets/img/vagues_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Vagues-submersion</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_VAGUES_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_VENT_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_VENT_COULEUR == "Rouge" %}
-            <img src="assets/img/vent_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_VENT_COULEUR == "Orange" %}
-            <img src="assets/img/vent_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_VENT_COULEUR == "Jaune" %}
-            <img src="assets/img/vent_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Vent violent</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_VENT_RECOMMANDATION}}
-        </p>
-        <spacer size="16"></spacer>
-        {% endif %}
-        
-        {% if contact.VIGILANCE_AVALANCHES_RECOMMANDATION %}
-        <row>
-          <columns small="1">
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Rouge" %}
-            <img src="assets/img/avalanche_rouge.png" alt="Rouge" />
-            {% endif %} 
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Orange" %}
-            <img src="assets/img/avalanche_orange.png" alt="Orange" />
-            {% endif %} 
-            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Jaune" %}
-            <img src="assets/img/avalanche_jaune.png" alt="Jaune" />
-            {% endif %} 
-          </columns>
-          <columns small="11">
-            <p><strong>Avalanches</strong></p>
-          </columns>
-        </row>
-        <p>
-          \{{contact.VIGILANCE_AVALANCHES_RECOMMANDATION}}
-        </p>
-        {% endif %}
-         <spacer size="24"></spacer>
-
-        <p class="text-center">
-          \{{contact.VIGILANCE_GLOBALE_RECOMMANDATION|safe}}
-        </p>
-
-        <spacer size="24"></spacer>
-
-        <p class="text-center tiny">
-          Prévision pour le \{{contact.VIGILANCE_VALIDITE}}<br />à \{{contact.VILLE}}
-        </p>
-      </callout>
-    </columns>
-  </row>
-  <spacer size="40"></spacer>
-  {% endif %} 
   {% if contact.SHOW_QA %}
   <row>
     <columns>
@@ -934,6 +682,237 @@ subject: Indicateurs quotidiens
           \{{contact.DEPARTEMENT}}
         </p>
      
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %}
+  {% if contact.SHOW_VIGILANCE %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <p class="no-margin text-center"><b>Vigilance météo</b></p>
+        <spacer size="16"></spacer>
+        <h2 class="text-center blue no-margin">\{{contact.VIGILANCE_LABEL}}</h2>
+        <spacer size="24"></spacer>
+        {% if contact.VIGILANCE_VENT_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_VENT_COULEUR == "Rouge" %}
+            <img src="assets/img/vent_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_VENT_COULEUR == "Orange" %}
+            <img src="assets/img/vent_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_VENT_COULEUR == "Jaune" %}
+            <img src="assets/img/vent_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Vent violent</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_VENT_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_PLUIE_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_PLUIE_COULEUR == "Rouge" %}
+            <img src="assets/img/pluie_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_PLUIE_COULEUR == "Orange" %}
+            <img src="assets/img/pluie_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_PLUIE_COULEUR == "Jaune" %}
+            <img src="assets/img/pluie_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Pluie-inondation</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_PLUIE_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_ORAGES_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_ORAGES_COULEUR == "Rouge" %}
+            <img src="assets/img/orages_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_ORAGES_COULEUR == "Orange" %}
+            <img src="assets/img/orages_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_ORAGES_COULEUR == "Jaune" %}
+            <img src="assets/img/orages_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Orages</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_ORAGES_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_CRUES_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_CRUES_COULEUR == "Rouge" %}
+            <img src="assets/img/crues_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_CRUES_COULEUR == "Orange" %}
+            <img src="assets/img/crues_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_CRUES_COULEUR == "Jaune" %}
+            <img src="assets/img/crues_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Crues</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_CRUES_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_NEIGE_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_NEIGE_COULEUR == "Rouge" %}
+            <img src="assets/img/neige_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_NEIGE_COULEUR == "Orange" %}
+            <img src="assets/img/neige_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_NEIGE_COULEUR == "Jaune" %}
+            <img src="assets/img/neige_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Neige-verglas</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_NEIGE_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_CANICULE_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_CANICULE_COULEUR == "Rouge" %}
+            <img src="assets/img/canicule_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_CANICULE_COULEUR == "Orange" %}
+            <img src="assets/img/canicule_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_CANICULE_COULEUR == "Jaune" %}
+            <img src="assets/img/canicule_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Canicules</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_CANICULE_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_FROID_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_FROID_COULEUR == "Rouge" %}
+            <img src="assets/img/froid_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_FROID_COULEUR == "Orange" %}
+            <img src="assets/img/froid_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_FROID_COULEUR == "Jaune" %}
+            <img src="assets/img/froid_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Grand froid</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_FROID_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_AVALANCHES_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Rouge" %}
+            <img src="assets/img/avalanche_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Orange" %}
+            <img src="assets/img/avalanche_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Jaune" %}
+            <img src="assets/img/avalanche_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Avalanches</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_AVALANCHES_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        {% if contact.VIGILANCE_VAGUES_RECOMMANDATION %}
+        <row>
+          <columns small="1">
+            {% if contact.VIGILANCE_VAGUES_COULEUR == "Rouge" %}
+            <img src="assets/img/vagues_rouge.png" alt="Rouge" />
+            {% endif %}
+            {% if contact.VIGILANCE_VAGUES_COULEUR == "Orange" %}
+            <img src="assets/img/vagues_orange.png" alt="Orange" />
+            {% endif %}
+            {% if contact.VIGILANCE_VAGUES_COULEUR == "Jaune" %}
+            <img src="assets/img/vagues_jaune.png" alt="Jaune" />
+            {% endif %}
+          </columns>
+          <columns small="11">
+            <p><strong>Vagues-submersion</strong></p>
+          </columns>
+        </row>
+        <p>
+          \{{contact.VIGILANCE_VAGUES_RECOMMANDATION}}
+        </p>
+        <spacer size="16"></spacer>
+        {% endif %}
+
+        <spacer size="24"></spacer>
+
+        <p class="text-center">
+          \{{contact.VIGILANCE_GLOBALE_RECOMMANDATION|safe}}
+        </p>
+
+        <spacer size="24"></spacer>
+
+        <p class="text-center tiny">
+          Prévision du \{{contact.VIGILANCE_VALIDITE_DEBUT}} au \{{contact.VIGILANCE_VALIDITE_FIN}}<br />à \{{contact.VILLE}}
+        </p>
       </callout>
     </columns>
   </row>
