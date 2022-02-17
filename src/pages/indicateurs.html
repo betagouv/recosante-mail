@@ -693,9 +693,9 @@ subject: Indicateurs quotidiens
       <callout class="warning">
         <p class="no-margin text-center"><b>Vigilance météo</b></p>
         <spacer size="16"></spacer>
-        <h2 class="text-center blue no-margin">\{{contact.VIGILANCE_LABEL}}</h2>
-        <spacer size="24"></spacer>
-        {% if contact.VIGILANCE_VENT_RECOMMANDATION %}
+        <h2 class="text-center blue">\{{contact.VIGILANCE_LABEL}}</h2>
+        <spacer size="16"></spacer>
+        {% if contact.VIGILANCE_VENT_COULEUR == "Rouge" or contact.VIGILANCE_VENT_COULEUR == "Orange" or contact.VIGILANCE_VENT_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_VENT_COULEUR == "Rouge" %}
@@ -713,12 +713,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_VENT_RECOMMANDATION}}
+          \{{contact.VIGILANCE_VENT_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_PLUIE_RECOMMANDATION %}
+        {% if contact.VIGILANCE_PLUIE_COULEUR == "Rouge" or contact.VIGILANCE_PLUIE_COULEUR == "Orange" or contact.VIGILANCE_PLUIE_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_PLUIE_COULEUR == "Rouge" %}
@@ -736,12 +735,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_PLUIE_RECOMMANDATION}}
+          \{{contact.VIGILANCE_PLUIE_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_ORAGES_RECOMMANDATION %}
+        {% if contact.VIGILANCE_ORAGES_COULEUR == "Rouge" or contact.VIGILANCE_ORAGES_COULEUR == "Orange" or contact.VIGILANCE_ORAGES_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_ORAGES_COULEUR == "Rouge" %}
@@ -759,12 +757,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_ORAGES_RECOMMANDATION}}
+          \{{contact.VIGILANCE_ORAGES_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_CRUES_RECOMMANDATION %}
+        {% if contact.VIGILANCE_CRUES_COULEUR == "Rouge" or contact.VIGILANCE_CRUES_COULEUR == "Orange" or contact.VIGILANCE_CRUES_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_CRUES_COULEUR == "Rouge" %}
@@ -782,12 +779,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_CRUES_RECOMMANDATION}}
+          \{{contact.VIGILANCE_CRUES_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_NEIGE_RECOMMANDATION %}
+        {% if contact.VIGILANCE_NEIGE_COULEUR == "Rouge" or contact.VIGILANCE_NEIGE_COULEUR == "Orange" or contact.VIGILANCE_NEIGE_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_NEIGE_COULEUR == "Rouge" %}
@@ -805,12 +801,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_NEIGE_RECOMMANDATION}}
+          \{{contact.VIGILANCE_NEIGE_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_CANICULE_RECOMMANDATION %}
+        {% if contact.VIGILANCE_CANICULE_COULEUR == "Rouge" or contact.VIGILANCE_CANICULE_COULEUR == "Orange" or contact.VIGILANCE_CANICULE_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_CANICULE_COULEUR == "Rouge" %}
@@ -828,12 +823,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_CANICULE_RECOMMANDATION}}
+          \{{contact.VIGILANCE_CANICULE_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_FROID_RECOMMANDATION %}
+        {% if contact.VIGILANCE_FROID_COULEUR == "Rouge" or contact.VIGILANCE_FROID_COULEUR == "Orange" or contact.VIGILANCE_FROID_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_FROID_COULEUR == "Rouge" %}
@@ -851,12 +845,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_FROID_RECOMMANDATION}}
+          \{{contact.VIGILANCE_FROID_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_AVALANCHES_RECOMMANDATION %}
+        {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Rouge" or contact.VIGILANCE_AVALANCHES_COULEUR == "Orange" or contact.VIGILANCE_AVALANCHES_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_AVALANCHES_COULEUR == "Rouge" %}
@@ -874,12 +867,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_AVALANCHES_RECOMMANDATION}}
+          \{{contact.VIGILANCE_AVALANCHES_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        {% if contact.VIGILANCE_VAGUES_RECOMMANDATION %}
+        {% if contact.VIGILANCE_VAGUES_COULEUR == "Rouge" or contact.VIGILANCE_VAGUES_COULEUR == "Orange" or contact.VIGILANCE_VAGUES_COULEUR == "Jaune" %}
         <row>
           <columns small="1">
             {% if contact.VIGILANCE_VAGUES_COULEUR == "Rouge" %}
@@ -897,12 +889,11 @@ subject: Indicateurs quotidiens
           </columns>
         </row>
         <p>
-          \{{contact.VIGILANCE_VAGUES_RECOMMANDATION}}
+          \{{contact.VIGILANCE_VAGUES_RECOMMANDATION|safe}}
         </p>
-        <spacer size="16"></spacer>
         {% endif %}
 
-        <spacer size="24"></spacer>
+        <spacer size="16"></spacer>
 
         <p class="text-center">
           \{{contact.VIGILANCE_GLOBALE_RECOMMANDATION|safe}}
