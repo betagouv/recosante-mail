@@ -246,11 +246,11 @@ subject: Indicateurs quotidiens
           Prévision pour le \{{contact.QUALITE_AIR_VALIDITE}}<br />à \{{contact.VILLE}}
         </p>
         <p class="text-center tiny">
-          L’indice peut être mis à jour à 14h,<br/><a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">retrouvez-le ici.</a>
+          L’indice peut être mis à jour à 14h,<br/><a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE_SLUG}}">retrouvez-le ici.</a>
         </p>
         {% else %}
         <p class="text-center">
-          L'indice de qualité de l'air à \{{contact.VILLE}} n'est pas disponible au moment de l'envoi de cet email.<br/><a href="https://recosante.beta.gouv.fr/places/\{{contact.VILLE_CODE}}/\{{contact.VILLE}}">Retrouvez-le ici.</a>
+          L'indice de qualité de l'air à \{{contact.VILLE}} n'est pas disponible au moment de l'envoi de cet email.<br/><a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE_SLUG}}">Retrouvez-le ici.</a>
         {% endif %} 
       </callout>
     </columns>
@@ -975,7 +975,7 @@ subject: Indicateurs quotidiens
         <a href="https://www.pollens.fr/">Le Réseau national de surveillance aérobiologique</a>
       </p>
       <p class="text-right tiny">
-      <a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE|lower }}">Voir dans le navigateur</a>
+      <a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE_SLUG}}">Voir dans le navigateur</a>
       <br/>
       <a href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}">Modifier mes préférences ou me désinscrire</a>
     </columns>
