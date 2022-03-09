@@ -909,6 +909,32 @@ subject: Indicateurs quotidiens
   </row>
   <spacer size="40"></spacer>
   {% endif %}
+  {% if contact.SHOW_INDICE_UV %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <p class="no-margin text-center"><b>Indice UV</b></p>
+        <spacer size="16"></spacer>
+        {% if contact.INDICE_UV_LABEL %}
+        <h2 class="text-center blue">\{{contact.INDICE_UV_LABEL}}</h2>
+        <spacer size="16"></spacer>
+        <p class="text-center">
+          \{{contact.RECOMMANDATION_INDICE_UV|safe}}
+        </p>
+        <spacer size="24"></spacer>
+        <p class="text-center tiny">
+          Prévision pour le \{{contact.INDICE_UV_VALIDITE}}<br />à \{{contact.VILLE}}
+        </p>
+        {% else %}
+        <p class="text-center">
+          L'indice UV à \{{contact.VILLE}} n'est pas disponible aujourd'hui.
+        </p>
+        {% endif %}
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %}
   <row>
     <columns>
       <h6 class="text-center blue">Partager Recosanté</h6>
