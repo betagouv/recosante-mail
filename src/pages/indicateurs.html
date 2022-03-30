@@ -953,6 +953,27 @@ subject: Indicateurs quotidiens
   </row>
   <spacer size="40"></spacer>
   {% endif %}
+  {% if not contact.SHOW_VIGILANCE or not contact.SHOW_INDICE_UV %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <h3>Deux nouveaux indicateurs sont disponibles !</h3>
+        <p>
+          Pour encore mieux connaître votre environnement, vous pouvez à présent vous abonner à la vigilance météo et à l'indice UV.
+        </p>
+        <center>
+          <button
+            class="radius"
+            href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}&token=\{{contact.AUTH_TOKEN}}"
+          >
+            Modifier mes préférences
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% endif %}
   <row>
     <columns>
       <h6 class="text-center blue">Partager Recosanté</h6>
