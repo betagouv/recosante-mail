@@ -1005,19 +1005,26 @@ subject: Indicateurs quotidiens
       <p class="text-right tiny">
         Les données sont fournies par
         <br/>
-        <a href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a>
+        <a class="black" href="\{{contact.LIEN_AASQA}}">\{{contact.NOM_AASQA}}</a>
         <br />
         {% if contact.POLLINARIUM_SENTINELLE %}
-          <a href="https://www.alertepollens.org/">Pollinariums sentinelles</a>
+          <a class="black" href="https://www.alertepollens.org/">Pollinariums sentinelles</a>
           <br />
         {% endif %}
-        <a href="https://www.pollens.fr/">Le Réseau national de surveillance aérobiologique</a>
+        <a  class="black" href="https://www.pollens.fr/">Le Réseau national de surveillance aérobiologique</a>
+        <br />
+        <a  class="black" href="https://meteofrance.com/">Météo-France</a>
       </p>
-      <p class="text-right tiny">
+    </columns>
+  </row>
+  <row>
+    <p class="text-center tiny">
       <a href="https://recosante.beta.gouv.fr/place/\{{contact.VILLE_CODE}}/\{{contact.VILLE_SLUG}}">Voir dans le navigateur</a>
       <br/>
-      <a href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}&token=\{{contact.AUTH_TOKEN}}">Modifier mes préférences ou me désinscrire</a>
-    </columns>
+      <a href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}&token=\{{contact.AUTH_TOKEN}}">Modifier mes préférences</a>
+      <br/>
+      <a href="https://recosante.beta.gouv.fr/donnees-personnelles">Gestion des données personnelles</a>
+    </p>
   </row>
 </container>
 <spacer size="40"></spacer>
