@@ -19,7 +19,25 @@ subject: Indicateurs quotidiens
       </p>
     </columns>
   </row>
-
+  <spacer size="40"></spacer>
+  <row>
+    <columns>
+      <callout class="warning">
+        <h3>Vous partez en vacances ?</h3>
+        <p>
+          Consultez à tout moment les indicateurs de la commune directement sur le <a href="https://recosante.beta.gouv.fr/">tableau de bord Recosanté</a> !<br />Pour recevoir directement les informations pour votre lieu de vacances, modifiez la commune sur votre compte.
+        </p>
+        <center>
+          <button
+            class="radius"
+            href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}&token=\{{contact.AUTH_TOKEN}}"
+          >
+            Modifier ma commune
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
   <spacer size="40"></spacer>
   {% if contact.SHOW_QA %}
   {% if contact.POLLUANT %}
@@ -960,6 +978,26 @@ subject: Indicateurs quotidiens
         <h3>Deux nouveaux indicateurs sont disponibles !</h3>
         <p>
           Pour encore mieux connaître votre environnement, vous pouvez à présent vous abonner à la vigilance météo et à l'indice UV.
+        </p>
+        <center>
+          <button
+            class="radius"
+            href="https://recosante.beta.gouv.fr/profil/?user=\{{contact.USER_UID}}&token=\{{contact.AUTH_TOKEN}}"
+          >
+            Modifier mes préférences
+          </button>
+        </center>
+      </callout>
+    </columns>
+  </row>
+  <spacer size="40"></spacer>
+  {% else %}
+  <row>
+    <columns>
+      <callout class="warning">
+        <h3>Modifiez vos préférences d'envoi</h3>
+        <p>
+          Vous pouvez à tout moment modifier vos préférences d’envoi sur votre compte (commune, choix des indicateurs environnementaux, tous les jours ou en cas de vigilance, etc.)
         </p>
         <center>
           <button
