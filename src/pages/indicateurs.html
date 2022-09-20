@@ -100,10 +100,9 @@ subject: Indicateurs quotidiens
         </center>
         <spacer size="16"></spacer>
 
-        
         {% if contact.SS_INDICE_PM25_LABEL %}
         <row>
-          <columns small="6">
+          <columns small="4">
             {% if contact.SS_INDICE_PM25_LABEL == "Bon" %}
               <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
             {% endif %}
@@ -122,18 +121,17 @@ subject: Indicateurs quotidiens
             {% if contact.SS_INDICE_PM25_LABEL == "Extrêmement Mauvais" %}
               <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
             {% endif %}
-            <spacer size="16">
           </columns>
-          <columns small="6">
-            <spacer size="2"></spacer><span>&nbsp;</span>
-            <a href="https://recosante.beta.gouv.fr/polluants/pm25" class=" small">PM2,5 <sup>(?)</sup></p>
+          <columns small="8">
+            <p><a href="https://recosante.beta.gouv.fr/polluants/pm25" class="small">Particules fines PM2,5 <sup>(?)</sup></p>
           </columns>
         </row>
+        <spacer size="16"></spacer>
         {% endif %}
           
         {% if contact.SS_INDICE_PM10_LABEL %}
         <row>
-          <columns small="6">
+          <columns small="4">
             {% if contact.SS_INDICE_PM10_LABEL == "Bon" %}
               <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
             {% endif %}
@@ -152,18 +150,17 @@ subject: Indicateurs quotidiens
             {% if contact.SS_INDICE_PM10_LABEL == "Extrêmement Mauvais" %}
               <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
             {% endif %}
-            <spacer size="16">
           </columns>
-          <columns small="6">
-            <spacer size="2"></spacer><span>&nbsp;</span>
-            <a href="https://recosante.beta.gouv.fr/polluants/pm10" class=" small">PM10 <sup>(?)</sup></p>
+          <columns small="8">
+            <p><a href="https://recosante.beta.gouv.fr/polluants/pm10" class=" small">Particules fines PM10 <sup>(?)</sup></p>
           </columns>
         </row>
+        <spacer size="16"></spacer>
         {% endif %}
 
         {% if contact.SS_INDICE_NO2_LABEL %}
         <row>
-          <columns small="6">
+          <columns small="4">
             {% if contact.SS_INDICE_NO2_LABEL == "Bon" %}
               <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
             {% endif %}
@@ -182,18 +179,17 @@ subject: Indicateurs quotidiens
             {% if contact.SS_INDICE_NO2_LABEL == "Extrêmement Mauvais" %}
               <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
             {% endif %}
-            <spacer size="16">
           </columns>
-          <columns small="6">
-            <spacer size="2"></spacer><span>&nbsp;</span>
-            <a href="https://recosante.beta.gouv.fr/polluants/no2" class="small">NO2 <sup>(?)</sup></p>
+          <columns small="8">
+            <p><a href="https://recosante.beta.gouv.fr/polluants/no2" class="small">Dioxyde d’azote NO2 <sup>(?)</sup></p>
           </columns>
         </row>
+        <spacer size="16"></spacer>
         {% endif %}
 
         {% if contact.SS_INDICE_O3_LABEL %}
         <row>
-          <columns small="6">
+          <columns small="4">
             {% if contact.SS_INDICE_O3_LABEL == "Bon" %}
               <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
             {% endif %}
@@ -212,18 +208,17 @@ subject: Indicateurs quotidiens
             {% if contact.SS_INDICE_O3_LABEL == "Extrêmement Mauvais" %}
               <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
             {% endif %}
-            <spacer size="16">
           </columns>
-          <columns small="6">
-            <spacer size="2"></spacer><span>&nbsp;</span>
-            <a href="https://recosante.beta.gouv.fr/polluants/o3" class="small">O3 <sup>(?)</sup></p>
+          <columns small="8">
+            <p><a href="https://recosante.beta.gouv.fr/polluants/o3" class="small">Ozone O3 <sup>(?)</sup></p>
           </columns>
         </row>
+        <spacer size="16"></spacer>
         {% endif %}
 
         {% if contact.SS_INDICE_SO2_LABEL %}
         <row>
-          <columns small="6">
+          <columns small="4">
             {% if contact.SS_INDICE_SO2_LABEL == "Bon" %}
               <img class="float-right" src="assets/img/polluant-bon.png"  alt="Bon" />
             {% endif %}
@@ -242,13 +237,12 @@ subject: Indicateurs quotidiens
             {% if contact.SS_INDICE_SO2_LABEL == "Extrêmement Mauvais" %}
               <img class="float-right" src="assets/img/polluant-extremement-mauvais.png" alt="Extrêmement Mauvais" />
             {% endif %}
-            <spacer size="16">
           </columns>
-          <columns small="6">
-            <spacer size="2"></spacer><span>&nbsp;</span>
-            <a href="https://recosante.beta.gouv.fr/polluants/so2" class="small">SO2 <sup>(?)</sup></p>
+          <columns small="8">
+            <p><a href="https://recosante.beta.gouv.fr/polluants/so2" class="small">Dioxyde de soufre SO2 <sup>(?)</sup></p>
           </columns>
         </row>
+        <spacer size="16">
         {% endif %}
 
         <spacer size="24"></spacer>
